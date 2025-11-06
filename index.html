@@ -280,7 +280,6 @@
             color: #666;
         }
         
-        /* Instructions box */
         /* Top Banner */
         .banner {
             background: linear-gradient(135deg, #d4f1f4 0%, #e8f5e9 100%);
@@ -354,24 +353,12 @@
 </head>
 <body>
     <div class="page-wrapper">
-        <!-- Instructions -->
-        <div class="instructions">
-            <h3>📝 How to Customize Your Background Image:</h3>
-            <ul>
-                <li><strong>Step 1:</strong> Find <code>line 13</code> in the code</li>
-                <li><strong>Step 2:</strong> Look for: <code>background-image: url('...')</code></li>
-                <li><strong>Step 3:</strong> Replace the URL inside the quotes with your image URL</li>
-                <li><strong>Step 4:</strong> Adjust overlay darkness on <code>line 27</code>: change <code>0.5</code> (0 = no overlay, 1 = solid black)</li>
-                <li><strong>Step 5:</strong> Save and reload the page!</li>
-            </ul>
-        </div>
-        
         <!-- Header -->
         <header class="header">
             <div class="container">
                 <div class="header-content">
                     <a href="#" class="logo">
-                        <img src="https://alison.com/img/alison-logo.svg" alt="Alison Logo" style="height: 40px; width: auto;" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNDAiIGZpbGw9IiMwMDY2Q0MiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5BbGlzb248L3RleHQ+PC9zdmc+';">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTUwIDUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZzEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRjZCMzU7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkJEMDA7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojOENDNjNCO3N0b3Atb3BhY2l0eToxIiAvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0gNSA0MCBMIDEwIDEwIEwgMTUgNDAgTCAyMCAyNSBMIDI1IDQwIFoiIGZpbGw9InVybCgjZzEpIi8+PHRleHQgeD0iMzUiIHk9IjMwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjNTU1Ij5BbGlzb248L3RleHQ+PHRleHQgeD0iMzUiIHk9IjQ0IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iIzc3NyI+RU1QT1dFUiBZT1VSU0VMRjwvdGV4dD48L3N2Zz4=" alt="Alison Logo" style="height: 50px; width: auto;">
                     </a>
                     <nav>
                         <ul class="nav-links">
@@ -729,7 +716,7 @@
                 <!-- Bottom Section -->
                 <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
                     <div>
-                        <img src="https://alison.com/img/alison-logo.svg" alt="Alison" style="height: 35px; margin-bottom: 10px;" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iNDAiIGZpbGw9IiNmZmZmZmYiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzMzMzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkFsaXNvbjwvdGV4dD48L3N2Zz4=';">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTUwIDUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZzEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRjZCMzU7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkJEMDA7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojOENDNjNCO3N0b3Atb3BhY2l0eToxIiAvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0gNSA0MCBMIDEwIDEwIEwgMTUgNDAgTCAyMCAyNSBMIDI1IDQwIFoiIGZpbGw9InVybCgjZzEpIi8+PHRleHQgeD0iMzUiIHk9IjMwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZmZmIj5BbGlzb248L3RleHQ+PHRleHQgeD0iMzUiIHk9IjQ0IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI2RkZCI+RU1QT1dFUiBZT1VSU0VMRjwvdGV4dD48L3N2Zz4=" alt="Alison" style="height: 50px; margin-bottom: 10px;">
                         <div style="display: flex; gap: 10px; margin-top: 15px;">
                             <a href="#" style="color: white; font-size: 0.9rem;">❓ FAQs</a>
                             <a href="#" style="color: white; font-size: 0.9rem; margin-left: 15px;">💬 Customer Support</a>
