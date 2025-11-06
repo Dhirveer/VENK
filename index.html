@@ -1,69 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Alison Certificate - Venkatesh N.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    /* Paste the CSS from above here */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; display: flex; align-items: center; justify-content: center; }
-    .certificate-box { background: #ffffff; max-width: 650px; width: 100%; margin: 0 auto; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); padding: 40px 45px; border-radius: 15px; border: 8px solid #f0f0f0; position: relative; }
-    .certificate-box::before { content: ''; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px; border: 2px solid #e0e0e0; border-radius: 8px; pointer-events: none; }
-    .logo { height: 50px; display: block; margin-bottom: 30px; }
-    h1 { color: #2c3e50; font-size: 2em; margin-bottom: 15px; text-align: center; text-transform: uppercase; letter-spacing: 2px; border-bottom: 3px solid #00b67a; padding-bottom: 10px; }
-    h2 { color: #555; font-size: 1.1em; margin-bottom: 25px; text-align: center; font-weight: normal; line-height: 1.6; }
-    .highlight { color: #00b67a; font-weight: bold; font-size: 1.15em; }
-    .score-box { background: linear-gradient(135deg, #00b67a 0%, #00d98f 100%); color: #ffffff; font-size: 1.4em; font-weight: bold; padding: 20px; text-align: center; border-radius: 12px; margin: 25px 0; box-shadow: 0 4px 15px rgba(0, 182, 122, 0.3); text-transform: uppercase; letter-spacing: 1px; }
-    .details-table { width: 100%; margin: 30px 0; border-collapse: separate; border-spacing: 0 10px; }
-    .details-table tr { background: #f8f9fa; border-radius: 8px; }
-    .details-table td { padding: 15px 20px; }
-    .details-table tr td:first-child { border-radius: 8px 0 0 8px; }
-    .details-table tr td:last-child { border-radius: 0 8px 8px 0; }
-    .label { font-weight: bold; color: #34495e; width: 45%; font-size: 0.95em; }
-    .value { color: #2c3e50; font-size: 1em; }
-    .score-row { background: #e8f5e9 !important; }
-    .score-row .value { color: #00b67a; font-weight: bold; font-size: 1.3em; }
-    .footer { color: #999; font-size: 0.9em; text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #e0e0e0; line-height: 1.8; }
-    @media (max-width: 600px) { .certificate-box { padding: 25px 20px; border: 5px solid #f0f0f0; } h1 { font-size: 1.5em; } .score-box { font-size: 1.1em; padding: 15px; } .details-table td { padding: 12px 15px; font-size: 0.9em; } .label { width: 40%; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alison - Free Online Courses</title>
+    
+    <!-- CUSTOM BACKGROUND STYLING WITH YOUR IMAGE -->
+    <style>
+        /* ========================================
+           BACKGROUND WITH YOUR CUSTOM IMAGE
+           Beautiful gradient background applied
+           ======================================== */
+        body {
+            background-image: url('https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/71091310/607fab2f-82e4-43fb-91b7-1f6b54059242/image.jpg?AWSAccessKeyId=ASIA2F3EMEYEYI7SWYAQ&Signature=9brRQubCDa%2BN4Ds8o6uP4w5ZiWA%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEOL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIEgH%2BAb1mCDz7SdA%2BGu55PSAjnXasxXqZ06jtIe8AOAbAiEAs0yF%2Bak4oSZ29C4vuAN8ski7Cev3iRRTW8AHXZp%2BSaMq%2FAQIq%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDK%2BhSxbCe3QCZVlpMyrQBA6x8kTecxDY%2F12bp5lwvfflQ0fhYtXxBxjow2kxqTk%2FzyrUIeC8ts1iSM8%2BOCPxXq2e7bsAuPuJAlpUrZUfF9KqLSeZgyYbpgqPLQIeAAHeSlPjFJfPyvLNaO%2FlSkOtGMZMDwxFeQlc5wanSHlQVMx2wEdMCmzySi3dOQFqP2A2s7%2BlwhjlfSEllL76N6E9QajDxcRL7%2Bl9ckarihDKg6o3e2uotmt1bjRSYPkwOKblCNmlNKwqQy0IKZhoix0PHB9UuUT77Q9trDzwMxdBuAAvAbGIHSNJee3TeKAvBCTRX7w1xbDWtNxFWGhxZgb2%2FJuDVE4TMQmIAQMqZrqcEtgtzJM2FGrI1ho7itcRYh422BbfvPsJXu0NGv7htOzeJ%2F6O32A2VEKyXvw7nxiDzOnD9Ptt2VIwqX8s3z%2FsJEJJL5JirxpPh3HfraFyCpnfrVUt0MqIpPUAmgWxQZi7p5AWXj3G2aEqwBs3fgUuurdg5l3pt%2Bqyrxd5aaA2TNfBz0pz44PTqMrwPmoIS%2F4He0I5tFdDFeBcfsdXh%2FqoFl0vsnzrzwe1mfwgZJXLJxeehUzkX8pkYAhARpfuOQWWuQpkxDXuZMMPlWHgfyI1SKJ1c3DMBSS8pN0A%2FFk6DYVr2MuaVJS6WV6jBSTLTxu2979%2BX1AUlqYrzpJc8SooPi8E%2BnF1Qc1UciHPOIUqJX4E4W2B44H0FxRZEZnuS8jJ7k%2FWFZfgmcsKUYT%2BrDYPsvhB9kHh6kKFltrxsKtyjK08fBnTxYj1LKu5f%2BOYBv9YDzMw%2BbKzyAY6mAFu%2BfZ%2B08hp4OCVh2%2BzTOR3GJm58gS7OdhikNdBLDbTfFF0HXESEU6yoNUNjFAtpqHDlse5fG4p124RQT%2F2HswwOyq%2FF8OKb2cUKboC1RZxdq843o9CBx8KzN3zyvn2yww4yRApwXY5A5jf3L9gboYRLB9jQ7j9pD3zENMK2%2B7xbGNZYc0vc%2FJYQSfFkc2hp%2BQWe4V19l%2FllQ%3D%3D&Expires=1765043063') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-attachment: fixed !important;
+            background-repeat: no-repeat !important;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Subtle overlay for better content readability */
+        body::before {
+            content: '' !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: rgba(0, 0, 0, 0.05) !important;
+            z-index: 0 !important;
+            pointer-events: none !important;
+        }
+        
+        /* All content sits above the background */
+        .page-wrapper {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+        }
+        
+        /* Header styling */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #0066CC;
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-signup {
+            background: #0066CC;
+            color: white;
+            border: none;
+        }
+        
+        .btn-signup:hover {
+            background: #0052A3;
+        }
+        
+        .btn-login {
+            background: transparent;
+            color: #0066CC;
+            border: 2px solid #0066CC;
+        }
+        
+        .btn-login:hover {
+            background: #0066CC;
+            color: white;
+        }
+        
+        /* Hero section - Certificate verification card */
+        .hero {
+            background: rgba(255, 255, 255, 0.97);
+            padding: 60px 40px;
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: left;
+            line-height: 1.6;
+        }
+        
+        /* Certificate info box */
+        .cert-info {
+            background: rgba(220, 235, 245, 0.6);
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border-left: 5px solid #0066CC;
+        }
+        
+        .cert-name {
+            font-size: 2rem;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        
+        .cert-detail {
+            display: flex;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .cert-label {
+            font-weight: 600;
+            color: #555;
+            min-width: 180px;
+        }
+        
+        .cert-value {
+            color: #333;
+        }
+        
+        /* Assessment scores */
+        .scores {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .score-box {
+            flex: 1;
+            min-width: 250px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background: white;
+        }
+        
+        .score-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        .score-note {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .score-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        /* Content sections */
+        .section {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 60px 0;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .course-content {
+            padding: 20px;
+        }
+        
+        .course-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .course-meta {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 0;
+            margin: 20px 20px 0;
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+            color: #666;
+        }
+        
+        /* Instructions box */
+        .instructions {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        
+        .instructions h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        
+        .instructions code {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        .instructions ul {
+            margin: 10px 0;
+        }
+        
+        .instructions li {
+            margin: 8px 0;
+            color: #856404;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .stats {
+                gap: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="certificate-box">
-    <img class="logo" src="https://cdn01.alison-static.net/public/html/site/img/logo-alison-light.svg" alt="Alison Logo">
-    <h1>Course Completion Certificate</h1>
-    <h2>This certifies that <span class="highlight">Venkatesh N.</span> has completed the course:</h2>
-    <div class="score-box">Master Embedded Systems: Challenges and Concepts</div>
-    <table class="details-table">
-      <tr>
-        <td class="label">Alison ID:</td>
-        <td class="value">52798190</td>
-      </tr>
-      <tr>
-        <td class="label">Date Of Completion:</td>
-        <td class="value">27th September 2025</td>
-      </tr>
-      <tr>
-        <td class="label">Email:</td>
-        <td class="value">nukalavenkatesh956@gmail.com</td>
-      </tr>
-      <tr>
-        <td class="label">Total Study Time:</td>
-        <td class="value">2h 40m</td>
-      </tr>
-      <tr class="score-row">
-        <td class="label">Final Assessment Score:</td>
-        <td class="value">90%</td>
-      </tr>
-      <tr>
-        <td class="label">CPD Hours Completed:</td>
-        <td class="value">1–3h</td>
-      </tr>
-    </table>
-    <div class="footer">
-      This certificate is auto-generated for online verification.<br>
-      <span>Alison.com © 2025</span>
+    <div class="page-wrapper">
+        <!-- Instructions -->
+        <div class="instructions">
+            <h3>📝 How to Customize Your Background Image:</h3>
+            <ul>
+                <li><strong>Step 1:</strong> Find <code>line 13</code> in the code</li>
+                <li><strong>Step 2:</strong> Look for: <code>background-image: url('...')</code></li>
+                <li><strong>Step 3:</strong> Replace the URL inside the quotes with your image URL</li>
+                <li><strong>Step 4:</strong> Adjust overlay darkness on <code>line 27</code>: change <code>0.5</code> (0 = no overlay, 1 = solid black)</li>
+                <li><strong>Step 5:</strong> Save and reload the page!</li>
+            </ul>
+        </div>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="#" class="logo">
+                        <img src="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/71091310/51ee5f15-bf04-48f2-83c9-82171c55d25c/image.jpg?AWSAccessKeyId=ASIA2F3EMEYE4S2XN2XJ&Signature=SObdd%2Bvp%2FZ0O%2F%2FjHEUpoJV6ir9A%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEOL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDB71J%2B8UhcijVJBzS%2Fx35DrI2V35W%2FQo6gggHxo0R29wIgYUNVYxh%2Bf1T%2BiToPp%2Fh7MNbETG306eZV9vFHMy1AfhEq%2FAQIqv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDBPoSUU%2B0gtDskbJpirQBGJ1MtSXSMSQwub49wtOuR8EGw6UI%2BXPkeTd5ZYEQSdVUQstCUOX7PophWWJ225BKx3j2jNwoS4aq4cD8UyF%2ByBWQt2s15SHkBzN1uu56xgSFLmbMB04JVfu4O4SFbI5Nt%2FYaKIFTzBs4B1n2ZV5%2BQi4SJV%2BQ%2FLDGv5zVd1hwAQxG3xrZ9OiWlbObDzlGUF06mhpQa%2B3q%2BRHBWpP%2Bsdfj71nEIS7D9oN9GxigmgMy1y4tXyWdpgkKgznlQKvSVoK869J2cUcY67e0%2F6qq4N0xR6tgLRwnrfOiO8MnZnzZgYPxiBEwYqPH8sa%2BHB%2FaTtamiswOwaJcIaXbqYrpI0dNy9WXTqEQqblJuneLSU%2BKw9EjQAbGivunuZjEJR%2FMMhltBFGKAKRDNAVu6x7XQYF9t%2Fi7GNxMmnLxvWsEB%2BpaSwfkvGbcX7XwGvV7XLKfJKbTSbb%2FT3hmZsKfmoRKMZH8pIm6FQlSLkHekphTboVGoFO8Gw7Jx6rz0RZlAfLOdV3a26Y2sXgNFq6Jl0P9s5B9Q%2FyVMDj7VFCjZdPq4%2B%2FGskwFYtKXChmpDbdgZl18J%2BqgQBPAJLQ5fhe5EHHO1cNk6seHr7KSi4c4HArnu3EDVjiQI0Z9ChDlx6hsyC98gFmCRvfDwKSNBHIK7byUBO9orjEUdDmlKTLhOnQhKvkyRy8Y7bmVSjgTOX8vEgsMEulKXUdrYKfiI2c4CtR8TR%2BmMl9PArr4Fxrlu1Z7KXy%2B5fh7y58ACZr3J%2BeD4A0LltUrz7%2Bn4lzDKKgGfwAzr4Ja2Mwr6qzyAY6mAGJNmOU%2FgRPcJRTHbMeOJsmPV%2BX6UoF83%2FTzVjqs4Z%2FC%2Bvb5E1sRU8w9fTvYPfFaZ2hGAI2kTw6QwkjZ9rNBsLFtiaKzRAfxWHr4PKTPz7jeV21kw%2FkUGXZyJ7vrHgwI1%2B6LFtkOkvkv0NsAGQIvy20V025RlRSpTvZ3fAzBm9a%2FWQzZuhMKz2COkUjZ36LHhxh1VFMjCnZMQ%3D%3D&Expires=1765042960" alt="Alison Logo" style="height: 40px; width: auto;">
+                    </a>
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="#courses">Courses</a></li>
+                            <li><a href="#learn">Learn</a></li>
+                            <li><a href="#teach">Teach</a></li>
+                        </ul>
+                    </nav>
+                    <div class="auth-buttons">
+                        <a href="#signup" class="btn btn-signup">Sign Up</a>
+                        <a href="#login" class="btn btn-login">Log In</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Certificate Verification Section -->
+        <section class="hero">
+            <h1>Your Learner Verification</h1>
+            <p>This is to verify that <strong>Venkatesh N.</strong> has completed the course <strong>Master Embedded Systems: Challenges and Concepts</strong> on Alison.</p>
+            
+            <div class="cert-info">
+                <div class="cert-name">Venkatesh.</div>
+                
+                <div class="cert-detail">
+                    <span class="cert-label">Alison ID:</span>
+                    <span class="cert-value">52798190</span>
+                </div>
+                
+                <div class="cert-detail">
+                    <span class="cert-label">Course Completed:</span>
+                    <span class="cert-value">Master Embedded Systems: Challenges and Concepts</span>
+                </div>
+                
+                <div class="cert-detail">
+                    <span class="cert-label">Date Of Completion:</span>
+                    <span class="cert-value">27th September 2025</span>
+                </div>
+                
+                <div class="cert-detail">
+                    <span class="cert-label">Email:</span>
+                    <span class="cert-value">nukalavenkatesh956@gmail.com</span>
+                </div>
+                
+                <div class="cert-detail">
+                    <span class="cert-label">Total Study Time:</span>
+                    <span class="cert-value">2h 40m</span>
+                </div>
+                
+                <div class="scores">
+                    <div class="score-box">
+                        <div class="score-title">Final Assessment Score:</div>
+                        <div class="score-note">Alison courses requires at least 80% to pass the final assessment</div>
+                        <div class="score-value">90%</div>
+                    </div>
+                    
+                    <div class="score-box">
+                        <div class="score-title">CPD Hours Completed:</div>
+                        <div class="score-note">CPD approved learning hours completed through this course</div>
+                        <div class="score-value">1-3h</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Popular Courses Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Popular Courses</h2>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <img src="https://cdn01.alison-static.net/courses/1245/alison_courseware_intro_1245.jpg" alt="Psychology" class="course-image">
+                        <div class="course-content">
+                            <h3 class="course-title">Diploma in Psychology</h3>
+                            <p class="course-meta">⏱️ 6-10 Hours • Diploma</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="https://cdn01.alison-static.net/courses/7301/alison_courseware_intro_7301.jpg" alt="Cybersecurity" class="course-image">
+                        <div class="course-content">
+                            <h3 class="course-title">Introduction to Cybersecurity</h3>
+                            <p class="course-meta">⏱️ 2-3 Hours • Certificate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="https://cdn01.alison-static.net/courses/5567/alison_courseware_intro_5567.jpg" alt="Excel" class="course-image">
+                        <div class="course-content">
+                            <h3 class="course-title">Working with Microsoft Excel 2019</h3>
+                            <p class="course-meta">⏱️ 1-2 Hours • Certificate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="https://cdn01.alison-static.net/courses/1252/alison_courseware_intro_1252.jpg" alt="Project Management" class="course-image">
+                        <div class="course-content">
+                            <h3 class="course-title">Diploma in Project Management</h3>
+                            <p class="course-meta">⏱️ 6-10 Hours • Diploma</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Choose Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Why Choose Alison?</h2>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h3 class="course-title">🎓 Free Courses</h3>
+                            <p class="course-meta">Access over 5,000 free online courses. No hidden fees.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h3 class="course-title">✅ Globally Recognized</h3>
+                            <p class="course-meta">Earn certificates recognized by employers worldwide.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h3 class="course-title">👥 40 Million Learners</h3>
+                            <p class="course-meta">Join a global community in 195 countries.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h3 class="course-title">⏰ Learn at Your Own Pace</h3>
+                            <p class="course-meta">Study whenever you want. Available 24/7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Alison. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
-  </div>
 </body>
 </html>
