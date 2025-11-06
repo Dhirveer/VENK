@@ -30,7 +30,7 @@
             left: 0 !important;
             right: 0 !important;
             bottom: 0 !important;
-            background: rgba(0, 0, 0, 0.05) !important;
+            background: rgba(0, 0, 0, 0.02) !important;
             z-index: 0 !important;
             pointer-events: none !important;
         }
@@ -127,12 +127,13 @@
         
         /* Hero section - Certificate verification card */
         .hero {
-            background: rgba(255, 255, 255, 0.97);
+            background: rgba(255, 255, 255, 0.98);
             padding: 60px 40px;
             margin: 30px auto;
             max-width: 900px;
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
         }
         
         .hero h1 {
@@ -153,11 +154,12 @@
         
         /* Certificate info box */
         .cert-info {
-            background: rgba(220, 235, 245, 0.6);
+            background: rgba(220, 235, 245, 0.8);
             padding: 40px;
             margin: 30px 0;
             border-radius: 12px;
             border-left: 5px solid #0066CC;
+            backdrop-filter: blur(5px);
         }
         
         .cert-name {
@@ -197,7 +199,8 @@
             border: 2px solid #ddd;
             border-radius: 10px;
             padding: 20px;
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
         }
         
         .score-title {
@@ -227,6 +230,7 @@
             margin: 20px;
             border-radius: 20px;
             box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
         
         .section h2 {
@@ -291,33 +295,56 @@
         }
         
         /* Instructions box */
-        .instructions {
-            background: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 20px;
+        /* Top Banner */
+        .banner {
+            background: linear-gradient(135deg, #d4f1f4 0%, #e8f5e9 100%);
+            padding: 12px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 102, 204, 0.2);
+        }
+        
+        /* Statistics Section */
+        .stats-section {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 60px 0;
             margin: 20px;
-            border-radius: 8px;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
         
-        .instructions h3 {
-            color: #856404;
-            margin-top: 0;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
         }
         
-        .instructions code {
-            background: rgba(0, 0, 0, 0.1);
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-family: monospace;
+        .stat-card {
+            padding: 30px 20px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-radius: 15px;
+            transition: transform 0.3s;
         }
         
-        .instructions ul {
-            margin: 10px 0;
+        .stat-card:hover {
+            transform: translateY(-10px);
         }
         
-        .instructions li {
-            margin: 8px 0;
-            color: #856404;
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #555;
+            font-weight: 600;
         }
         
         @media (max-width: 768px) {
@@ -424,8 +451,35 @@
             </div>
         </section>
         
-        <!-- Popular Courses Section -->
+        <!-- Course Information Section -->
         <section class="section">
+            <div class="container">
+                <h2>Course Information</h2>
+                <div style="background: white; padding: 40px; border-radius: 10px; margin-bottom: 20px;">
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                        This free online course will help you comprehend essential concepts and challenges associated with embedded systems.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                        Embedded systems design is a broad area that includes massive systems like MR scanners and small systems like chips. These systems have a lot of limitations that make it hard for those who are not familiar with the ideas to learn. The goal of this course is to assist you in fully comprehending all facets of the challenges and concepts linked to embedded systems. It starts with an explanation of what embedding and computing systems consist of.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                        The course will then introduce the main embedded systems challenges. Further, you will understand embedded systems implementation techniques, microcontroller processors, and CPUs. Instruction Set Architecture (ISA) and its main representatives, RISC and CISC, will next be discussed. Further, you will explore all the steps of the processor cycle in detail. The following example will make it even more transparent and easy to understand.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                        Next, you will comprehend the various types of memory used to store data. First, you will learn about volatile and non-volatile memory, NVRAM memory, and diverse Random Access Memory (RAM) and Read Only Memory (ROM) categories. The final section will discover different types of CPU architecture. You will understand the similarities and differences between Von Neumann and Harvard Architecture.
+                    </p>
+                </div>
+                
+                <h2 style="margin-top: 50px;">Modules Completed</h2>
+                <div style="background: white; padding: 40px; border-radius: 10px;">
+                    <h3 style="color: #555; font-size: 1.2rem; margin-bottom: 15px;">Module 1: Embedded Systems Challenges and Concepts</h3>
+                    <h3 style="color: #555; font-size: 1.2rem; margin-bottom: 0;">Module 2: Course assessment</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Courses Section -->
+        <section class="section" style="display: none;">
             <div class="container">
                 <h2>Popular Courses</h2>
                 <div class="course-grid">
@@ -458,6 +512,107 @@
                         <div class="course-content">
                             <h3 class="course-title">Diploma in Project Management</h3>
                             <p class="course-meta">⏱️ 6-10 Hours • Diploma</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="https://cdn01.alison-static.net/courses/2043/alison_courseware_intro_2043.jpg" alt="Digital Marketing" class="course-image">
+                        <div class="course-content">
+                            <h3 class="course-title">Diploma in Digital Marketing</h3>
+                            <p class="course-meta">⏱️ 6-10 Hours • Diploma</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="https://cdn01.alison-static.net/courses/3241/alison_courseware_intro_3241.jpg" alt="Web Development" class="course-image">
+                        <div class="course-content">
+                            <h3 class="course-title">HTML5 and CSS3 Fundamentals</h3>
+                            <p class="course-meta">⏱️ 3-4 Hours • Certificate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="https://cdn01.alison-static.net/courses/4532/alison_courseware_intro_4532.jpg" alt="Data Science" class="course-image">
+                        <div class="course-content">
+                            <h3 class="course-title">Introduction to Data Science</h3>
+                            <p class="course-meta">⏱️ 2-3 Hours • Certificate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="https://cdn01.alison-static.net/courses/6785/alison_courseware_intro_6785.jpg" alt="Graphic Design" class="course-image">
+                        <div class="course-content">
+                            <h3 class="course-title">Diploma in Graphic Design</h3>
+                            <p class="course-meta">⏱️ 6-10 Hours • Diploma</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Learning Paths Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Featured Learning Paths</h2>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <div class="course-content" style="padding: 40px;">
+                            <h3 class="course-title" style="font-size: 1.5rem;">💼 Business & Management</h3>
+                            <p class="course-meta">Build essential business skills with courses in management, finance, and entrepreneurship.</p>
+                            <a href="#business" class="btn btn-signup" style="display: inline-block; margin-top: 15px;">Explore Path</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-content" style="padding: 40px;">
+                            <h3 class="course-title" style="font-size: 1.5rem;">💻 Technology & IT</h3>
+                            <p class="course-meta">Master programming, cybersecurity, cloud computing, and more cutting-edge tech skills.</p>
+                            <a href="#tech" class="btn btn-signup" style="display: inline-block; margin-top: 15px;">Explore Path</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-content" style="padding: 40px;">
+                            <h3 class="course-title" style="font-size: 1.5rem;">🎨 Creative Arts</h3>
+                            <p class="course-meta">Unleash your creativity with graphic design, photography, and multimedia courses.</p>
+                            <a href="#creative" class="btn btn-signup" style="display: inline-block; margin-top: 15px;">Explore Path</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-content" style="padding: 40px;">
+                            <h3 class="course-title" style="font-size: 1.5rem;">🏥 Health & Wellness</h3>
+                            <p class="course-meta">Study nutrition, mental health, fitness, and healthcare administration.</p>
+                            <a href="#health" class="btn btn-signup" style="display: inline-block; margin-top: 15px;">Explore Path</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="section">
+            <div class="container">
+                <h2>What Our Learners Say</h2>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <div class="course-content">
+                            <p style="font-size: 1.1rem; line-height: 1.6; color: #555; margin-bottom: 15px;">"Alison helped me transition into a new career. The courses are comprehensive and the certificates are recognized by employers."</p>
+                            <p style="font-weight: 600; color: #0066CC;">— Sarah M., Marketing Professional</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-content">
+                            <p style="font-size: 1.1rem; line-height: 1.6; color: #555; margin-bottom: 15px;">"I completed my Diploma in Project Management for free. The quality of education exceeded my expectations!"</p>
+                            <p style="font-weight: 600; color: #0066CC;">— Michael K., Project Manager</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-content">
+                            <p style="font-size: 1.1rem; line-height: 1.6; color: #555; margin-bottom: 15px;">"Learning at my own pace was perfect for my busy schedule. Alison made it possible to upskill while working full-time."</p>
+                            <p style="font-weight: 600; color: #0066CC;">— Priya R., Software Developer</p>
                         </div>
                     </div>
                 </div>
@@ -501,9 +656,125 @@
         </section>
         
         <!-- Footer -->
-        <footer class="footer">
+        <footer style="background: #13343B; color: white; padding: 60px 20px 30px; margin: 0;">
             <div class="container">
-                <p>&copy; 2024 Alison. All rights reserved.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 50px;">
+                    <!-- Column 1 -->
+                    <div>
+                        <h3 style="color: white; margin-bottom: 20px; font-size: 1rem; font-weight: 600;">FREE ONLINE COURSE CATEGORIES</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">IT</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Health</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Language</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Business</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Management</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Personal Development</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Engineering &amp; Construction</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Teaching &amp; Academics</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">English</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div>
+                        <h3 style="color: white; margin-bottom: 20px; font-size: 1rem; font-weight: 600;">LEARN ABOUT ALISON</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Learning on Alison</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Our Story</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Board of Directors</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Alison in Africa</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Alison Programmes</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Our Course Creators</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Press Room</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Blog</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Our Team &amp; Culture</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Our Unique HQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 3 -->
+                    <div>
+                        <h3 style="color: white; margin-bottom: 20px; font-size: 1rem; font-weight: 600;">QUALITY FREE LEARNING</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">All Certificates</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">All Diplomas</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">All Free Courses</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Hubs</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Accreditation</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Graduate Outcomes</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Premium Learning</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Graduate Profiles</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Purchase a Gift Card</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 4 -->
+                    <div>
+                        <h3 style="color: white; margin-bottom: 20px; font-size: 1rem; font-weight: 600;">DISCOVER MORE</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Download App &amp; Learn Offline</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Access Free LMS</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Career Ready Plan</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Discover Careers</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Alison Profile</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Aptitude Test</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Verbal Reasoning Test</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Numerical Reasoning Test</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Abstract Reasoning Test</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Free Personality Test</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Free Well-being Check up</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Integrate Alison's API</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 5 -->
+                    <div>
+                        <h3 style="color: white; margin-bottom: 20px; font-size: 1rem; font-weight: 600;">EARN ON ALISON</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Create Courses on Alison</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Affiliate Programme</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #ccc; text-decoration: none; font-size: 0.95rem;">Refer a Friend</a></li>
+                        </ul>
+                        
+                        <h3 style="color: white; margin-bottom: 20px; margin-top: 30px; font-size: 1rem; font-weight: 600;">EVENTS</h3>
+                    </div>
+                </div>
+                
+                <!-- Bottom Section -->
+                <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                    <div>
+                        <img src="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/71091310/51ee5f15-bf04-48f2-83c9-82171c55d25c/image.jpg?AWSAccessKeyId=ASIA2F3EMEYE4S2XN2XJ&Signature=SObdd%2Bvp%2FZ0O%2F%2FjHEUpoJV6ir9A%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEOL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDB71J%2B8UhcijVJBzS%2Fx35DrI2V35W%2FQo6gggHxo0R29wIgYUNVYxh%2Bf1T%2BiToPp%2Fh7MNbETG306eZV9vFHMy1AfhEq%2FAQIqv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDBPoSUU%2B0gtDskbJpirQBGJ1MtSXSMSQwub49wtOuR8EGw6UI%2BXPkeTd5ZYEQSdVUQstCUOX7PophWWJ225BKx3j2jNwoS4aq4cD8UyF%2ByBWQt2s15SHkBzN1uu56xgSFLmbMB04JVfu4O4SFbI5Nt%2FYaKIFTzBs4B1n2ZV5%2BQi4SJV%2BQ%2FLDGv5zVd1hwAQxG3xrZ9OiWlbObDzlGUF06mhpQa%2B3q%2BRHBWpP%2Bsdfj71nEIS7D9oN9GxigmgMy1y4tXyWdpgkKgznlQKvSVoK869J2cUcY67e0%2F6qq4N0xR6tgLRwnrfOiO8MnZnzZgYPxiBEwYqPH8sa%2BHB%2FaTtamiswOwaJcIaXbqYrpI0dNy9WXTqEQqblJuneLSU%2BKw9EjQAbGivunuZjEJR%2FMMhltBFGKAKRDNAVu6x7XQYF9t%2Fi7GNxMmnLxvWsEB%2BpaSwfkvGbcX7XwGvV7XLKfJKbTSbb%2FT3hmZsKfmoRKMZH8pIm6FQlSLkHekphTboVGoFO8Gw7Jx6rz0RZlAfLOdV3a26Y2sXgNFq6Jl0P9s5B9Q%2FyVMDj7VFCjZdPq4%2B%2FGskwFYtKXChmpDbdgZl18J%2BqgQBPAJLQ5fhe5EHHO1cNk6seHr7KSi4c4HArnu3EDVjiQI0Z9ChDlx6hsyC98gFmCRvfDwKSNBHIK7byUBO9orjEUdDmlKTLhOnQhKvkyRy8Y7bmVSjgTOX8vEgsMEulKXUdrYKfiI2c4CtR8TR%2BmMl9PArr4Fxrlu1Z7KXy%2B5fh7y58ACZr3J%2BeD4A0LltUrz7%2Bn4lzDKKgGfwAzr4Ja2Mwr6qzyAY6mAGJNmOU%2FgRPcJRTHbMeOJsmPV%2BX6UoF83%2FTzVjqs4Z%2FC%2Bvb5E1sRU8w9fTvYPfFaZ2hGAI2kTw6QwkjZ9rNBsLFtiaKzRAfxWHr4PKTPz7jeV21kw%2FkUGXZyJ7vrHgwI1%2B6LFtkOkvkv0NsAGQIvy20V025RlRSpTvZ3fAzBm9a%2FWQzZuhMKz2COkUjZ36LHhxh1VFMjCnZMQ%3D%3D&Expires=1765042960" alt="Alison" style="height: 35px; margin-bottom: 10px;">
+                        <div style="display: flex; gap: 10px; margin-top: 15px;">
+                            <a href="#" style="color: white; font-size: 0.9rem;">❓ FAQs</a>
+                            <a href="#" style="color: white; font-size: 0.9rem; margin-left: 15px;">💬 Customer Support</a>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <div style="background: #32B8C6; padding: 8px 16px; border-radius: 5px;">
+                            <span style="font-weight: 600;">Rated Excellent</span> ⭐⭐⭐⭐⭐
+                        </div>
+                        <div style="color: #ccc; font-size: 0.9rem;">Trustpilot</div>
+                    </div>
+                </div>
+                
+                <!-- Social Icons & Copyright -->
+                <div style="margin-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: white; font-size: 1.5rem;">📘</a>
+                        <a href="#" style="color: white; font-size: 1.5rem;">𝕏</a>
+                        <a href="#" style="color: white; font-size: 1.5rem;">💼</a>
+                        <a href="#" style="color: white; font-size: 1.5rem;">📷</a>
+                        <a href="#" style="color: white; font-size: 1.5rem;">🎵</a>
+                        <a href="#" style="color: white; font-size: 1.5rem;">▶️</a>
+                        <a href="#" style="color: white; font-size: 1.5rem;">❓</a>
+                        <a href="#" style="color: white; font-size: 1.5rem;">✈️</a>
+                    </div>
+                    
+                    <div style="color: #ccc; font-size: 0.9rem;">
+                        <p style="margin: 0;">© Alison 2025 | <a href="#" style="color: #ccc;">Privacy</a> | <a href="#" style="color: #ccc;">Terms</a> | <a href="#" style="color: #ccc;">Cookie Policy</a> | <a href="#" style="color: #ccc;">Sitemap</a></p>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
